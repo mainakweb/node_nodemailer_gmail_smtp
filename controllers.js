@@ -34,8 +34,8 @@ exports.sendMail = async(req,res)=>{
       
       transporter.sendMail(mailOptions, function(error, info){
         if (error) {
-       console.log(error);
-       res.status(500).send(error);
+            console.log(error);
+            res.status(500).send(error);
         } else {
           console.log('Email sent: ' + info.response);
           // do something useful
